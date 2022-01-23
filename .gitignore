@@ -2,8 +2,9 @@
 ns-api-key.txt
 web3-api-key.txt
 
-# Cache
+# Cache and logs
 .spotdl-cache
+store.log
 
 # Folders
 prepare/
