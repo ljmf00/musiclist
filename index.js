@@ -38,8 +38,6 @@ for (const path of args._) {
 }
 
 
-console.log(`Uploading ${web3files.length} files to Web3 Storage`)
-console.log(`Uploading ${nsfiles.length} files to NS`)
 const web3cid = await web3client.put(web3files)
 console.log(web3cid)
 const nscid = await nsclient.storeDirectory(nsfiles)
