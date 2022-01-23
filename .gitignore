@@ -1,0 +1,12 @@
+# Keys
+ns-api-key.txt
+web3-api-key.txt
+
+# Cache
+.spotdl-cache
+
+# Folders
+prepare/
+
+# Nodejs
+node_modules/
