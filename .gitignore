@@ -8,6 +8,7 @@ store.log
 
 # Folders
 prepare/
+prepare-tmp/
 
 # Nodejs
 node_modules/
