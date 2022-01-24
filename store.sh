@@ -24,8 +24,10 @@ shopt -s dotglob;
 for file in ./prepare/* ; do
   echo "$file";
   FILE_CID_IPFS="$(ipfs add -n --pin=false --cid-version 1 -q "$file")"
-  if find ./store/ -name "$FILE_CID_IPFS" -exec false {} +; then
-    exiftool -json "$file" > "./store/all/$FILE_CID_IPFS"
+  if find ./store/ -type f -name "$FILE_CID_IPFS" -exec false {} +; then
+    exiftool -json "$file" > "./store/temp/$FILE_CID_IPFS"
+  else
+    ln -s "$(find ./store/ -type f -name "$FILE_CID_IPFS" | sed 's|^\.\/store|\.\.|')" "./store/temp/$FILE_CID_IPFS"
   fi
   rm "$file"
 done
