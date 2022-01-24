@@ -10,7 +10,7 @@ import std.format;
 
 int main()
 {
-    auto files = dirEntries("store", SpanMode.breadth)
+    auto files = dirEntries("store/metadata/", SpanMode.breadth)
         .filter!(f => f.isFile && !f.isSymlink);
 
     mkdirRecurse("playlists");
