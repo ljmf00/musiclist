@@ -14,21 +14,24 @@ mv ./prepare-tmp/*.mp3 ./prepare/
 mv ./prepare-tmp/.spotdl-cache .
 rm -rf ./prepare-tmp/
 
-touch store-cids
-node index.js ./prepare/ > store.log
-cat store.log >> store-cids
-
-mkdir -p ./store/all/
+mkdir -p ./store/temp/
 
 shopt -s dotglob;
 for file in ./prepare/* ; do
-  echo "$file";
   FILE_CID_IPFS="$(ipfs add -n --pin=false --cid-version 1 -q "$file")"
+  echo "$FILE_CID_IPFS"
   if find ./store/ -type f -name "$FILE_CID_IPFS" -exec false {} +; then
     exiftool -json "$file" > "./store/temp/$FILE_CID_IPFS"
   else
     ln -s "$(find ./store/ -type f -name "$FILE_CID_IPFS" | sed 's|^\.\/store|\.\.|')" "./store/temp/$FILE_CID_IPFS"
+    rm "$file"
   fi
-  rm "$file"
 done
 
+touch store-cids
+node index.js ./prepare/ > store.log
+cat store.log >> store-cids
+
+for file in ./prepare/* ; do
+  rm "$file"
+done
