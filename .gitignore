@@ -9,6 +9,7 @@ store.log
 # Folders
 prepare/
 prepare-tmp/
+playlists/
 
 # Nodejs
 node_modules/
