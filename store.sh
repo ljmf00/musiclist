@@ -2,6 +2,7 @@
 
 set -eu -o pipefail
 
+rm -rf ./prepare-tmp/ # avoid mixing files
 mkdir -p ./prepare-tmp/
 if [ -f .spotdl-cache ]; then
   mv .spotdl-cache ./prepare-tmp/
