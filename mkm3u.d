@@ -43,7 +43,7 @@ int main()
         if ("Genre" in json && json["Genre"].type == JSONType.string && !json["Genre"].str.empty)
             m3uFile.writeln(format!"#EXTGENRE:%s"(json["Genre"].str));
 
-        m3uFile.writeln(format!"https://ipfs.io/ipfs/%s\n"(baseName(name)));
+        m3uFile.writeln(format!"http://localhost:8080/ipfs/%s\n"(baseName(name)));
     }
     m3uFile.close();
     return 0;
