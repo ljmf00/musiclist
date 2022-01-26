@@ -2,18 +2,6 @@
 
 set -eu -o pipefail
 
-rm -rf ./prepare-tmp/ # avoid mixing files
-mkdir -p ./prepare-tmp/
-if [ -f .spotdl-cache ]; then
-  mv .spotdl-cache ./prepare-tmp/
-fi
-spotdl "$@" --output-format mp3 --dt 8 --st 8 -o ./prepare-tmp/
-
-mkdir -p ./prepare/
-mv ./prepare-tmp/*.mp3 ./prepare/
-mv ./prepare-tmp/.spotdl-cache .
-rm -rf ./prepare-tmp/
-
 mkdir -p ./store/metadata/temp/
 
 shopt -s dotglob;
@@ -26,12 +14,4 @@ for file in ./prepare/* ; do
     ln -s "$(find ./store/metadata/ -type f -name "$FILE_CID_IPFS" | sed 's|^\.\/store\/metadata|\.\.|')" "./store/metadata/temp/$FILE_CID_IPFS"
     rm "$file"
   fi
-done
-
-touch ./store/cids
-node index.js ./prepare/ > store.log
-cat store.log >> ./store/cids
-
-for file in ./prepare/* ; do
-  rm "$file"
 done
