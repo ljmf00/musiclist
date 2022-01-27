@@ -11,7 +11,9 @@ for file in ./prepare/* ; do
   if find ./store/metadata/ -type f -name "$FILE_CID_IPFS" -exec false {} +; then
     exiftool -json "$file" > "./store/metadata/temp/$FILE_CID_IPFS"
   else
-    ln -s "$(find ./store/metadata/ -type f -name "$FILE_CID_IPFS" | sed 's|^\.\/store\/metadata|\.\.|')" "./store/metadata/temp/$FILE_CID_IPFS"
+    if [ ! -f "./store/metadata/temp/$FILE_CID_IPFS" ]; then
+      ln -s "$(find ./store/metadata/ -type f -name "$FILE_CID_IPFS" | sed 's|^\.\/store\/metadata|\.\.|')" "./store/metadata/temp/$FILE_CID_IPFS"
+    fi
     rm "$file"
   fi
 done
