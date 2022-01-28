@@ -15,16 +15,20 @@ import std.array;
 import std.conv;
 import std.datetime;
 import std.string;
+import std.getopt;
 
 import dxml.writer;
 import dxml.util;
 
+bool localhost;
+
 static immutable RELIABLE_GATEWAYS = [
-    "https://dweb.link/ipfs/%s",
     "https://cloudflare-ipfs.com/ipfs/%s",
+    "https://dweb.link/ipfs/%s",
     "https://ipfs.io/ipfs/%s",
-    "http://localhost:8080/ipfs/%s",
 ];
+
+static immutable LOCALHOST_GATEWAY = "http://localhost:8080/ipfs/%s";
 
 struct Metadata {
     this(string filename)
@@ -99,7 +103,10 @@ void writeM3U(string filename, Metadata[] files)
         if (m.genre)
             m3uFile.writeln(format!"#EXTGENRE:%s"(m.genre));
 
-        m3uFile.writeln(format!(RELIABLE_GATEWAYS[0] ~ "\n")(m.hash));
+        if (localhost)
+            m3uFile.writeln(format!(LOCALHOST_GATEWAY ~ "\n")(m.hash));
+        else
+            m3uFile.writeln(format!(RELIABLE_GATEWAYS[$ - 1] ~ "\n")(m.hash));
     }
 }
 
@@ -141,10 +148,11 @@ void writeXSPF(string filename, string name, Metadata[] files)
                 if (m.duration)
                     writer.writeTaggedText("duration", encodeText(m.duration.total!"msecs".to!string), Newline.no, InsertIndent.no);
 
-
                 foreach(gw; RELIABLE_GATEWAYS)
                     writer.writeTaggedText("location", format(gw, m.hash), Newline.no, InsertIndent.no);
 
+                if (localhost)
+                    writer.writeTaggedText("location", format(LOCALHOST_GATEWAY, m.hash), Newline.no, InsertIndent.no);
             }
         }
     }
@@ -153,8 +161,18 @@ void writeXSPF(string filename, string name, Metadata[] files)
     file.writeln(writer.output.data);
 }
 
-int main()
+int main(string[] args)
 {
+    auto helpInformation = getopt(
+        args, "localhost", &localhost);
+
+    if (helpInformation.helpWanted)
+    {
+      defaultGetoptPrinter("Some information about the program.",
+        helpInformation.options);
+      return 0;
+    }
+
     auto playlists = dirEntries("store/metadata/", SpanMode.breadth)
         .filter!(f => f.isFile)
         .map!(f => tuple(baseName(dirName(f.name)), f))
@@ -165,6 +183,7 @@ int main()
     auto filesMetadata = files.map!(f => Metadata(f)).array;
 
     mkdirRecurse("playlists");
+
     writeM3U("playlists/all.m3u", filesMetadata);
     writeXSPF("playlists/all.xspf", "all", filesMetadata);
 
