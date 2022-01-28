@@ -16,6 +16,7 @@ import std.conv;
 import std.datetime;
 import std.string;
 import std.getopt;
+import std.experimental.logger;
 
 import dxml.writer;
 import dxml.util;
@@ -33,6 +34,7 @@ static immutable LOCALHOST_GATEWAY = "http://localhost:8080/ipfs/%s";
 struct Metadata {
     this(string filename)
     {
+        log(format!"Process %s"(filename));
         auto json = parseJSON(readText(filename));
 
         // get object, if array
@@ -82,6 +84,7 @@ struct Metadata {
 
 void writeM3U(string filename, Metadata[] files)
 {
+    log(format!"Proccess %s"(filename));
     auto m3uFile = new File(filename, "w");
     scope(exit) m3uFile.close();
 
@@ -112,6 +115,7 @@ void writeM3U(string filename, Metadata[] files)
 
 void writeXSPF(string filename, string name, Metadata[] files)
 {
+    log(format!"Proccess %s"(filename));
     auto file = new File(filename, "w");
     scope(exit) file.close();
 
