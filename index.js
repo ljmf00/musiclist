@@ -1,5 +1,4 @@
 import { NFTStorage, File } from 'nft.storage'
-import { pack } from 'ipfs-car/pack'
 import process from 'process'
 import minimist from 'minimist'
 import { Web3Storage, getFilesFromPath } from 'web3.storage'
@@ -30,15 +29,19 @@ function getFiles (dir, files_){
     return files_;
 }
 
-for (const path of args._) {
-  const pathFiles = await getFilesFromPath(path)
-  web3files.push(...pathFiles)
+async function main() {
+  for (const path of args._) {
+    const pathFiles = await getFilesFromPath(path)
+    web3files.push(...pathFiles)
 
-  nsfiles.push(...getFiles(path).map(f => new File([fs.readFileSync(f)], f)))
+    nsfiles.push(...getFiles(path).map(f => new File([fs.readFileSync(f)], f)))
+  }
+
+
+  const web3cid = await web3client.put(web3files)
+  console.log(web3cid)
+  const nscid = await nsclient.storeDirectory(nsfiles)
+  console.log(nscid)
 }
 
-
-const web3cid = await web3client.put(web3files)
-console.log(web3cid)
-const nscid = await nsclient.storeDirectory(nsfiles)
-console.log(nscid)
+main()
