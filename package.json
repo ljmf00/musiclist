@@ -5,5 +5,14 @@
     "nft.storage": "^5.2.0",
     "process": "^0.11.10",
     "web3.storage": "^3.5.3"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "node": true
+    }
   }
 }
