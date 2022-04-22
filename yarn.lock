@@ -730,6 +730,33 @@ ipfs-car@^0.6.2:
     streaming-iterables "^6.0.0"
     uint8arrays "^3.0.0"
 
+ipfs-car@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/ipfs-car/-/ipfs-car-0.7.0.tgz#72955d2b6904e87edfa17bbe5c00c1b3fcb79bb9"
+  integrity sha512-9ser6WWZ1ZMTCGbcVkRXUzOrpQ4SIiLfzIEnk+3LQsXbV09yeZg3ijhRuEXozEIYE68Go9JmOFshamsK9iKlNQ==
+  dependencies:
+    "@ipld/car" "^3.2.3"
+    "@web-std/blob" "^3.0.1"
+    bl "^5.0.0"
+    blockstore-core "^1.0.2"
+    browser-readablestream-to-it "^1.0.2"
+    idb-keyval "^6.0.3"
+    interface-blockstore "^2.0.2"
+    ipfs-core-types "^0.8.3"
+    ipfs-core-utils "^0.12.1"
+    ipfs-unixfs-exporter "^7.0.4"
+    ipfs-unixfs-importer "^9.0.4"
+    ipfs-utils "^9.0.2"
+    it-all "^1.0.5"
+    it-last "^1.0.5"
+    it-pipe "^1.1.0"
+    meow "^9.0.0"
+    move-file "^2.1.0"
+    multiformats "^9.6.3"
+    stream-to-it "^0.2.3"
+    streaming-iterables "^6.0.0"
+    uint8arrays "^3.0.0"
+
 ipfs-core-types@^0.8.3, ipfs-core-types@^0.8.4:
   version "0.8.4"
   resolved "https://registry.yarnpkg.com/ipfs-core-types/-/ipfs-core-types-0.8.4.tgz#4d483dc6035714ea48a0b02e3f82b6c6d55c8525"
@@ -1628,6 +1655,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+throttled-queue@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/throttled-queue/-/throttled-queue-2.1.2.tgz#52d39708ee5adf019091eed7c820e1def8544b22"
+  integrity sha512-tUa5+OEw0zqNeKFFc/meOruMylj3ZZSS1X1e8WqU2YZ5jFwIU0qQP8IMuLq1eIuqdhHukktwONajChwqEwMkqA==
+
 timeout-abort-controller@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/timeout-abort-controller/-/timeout-abort-controller-1.1.1.tgz#2c3c3c66f13c783237987673c276cbd7a9762f29"
@@ -1722,10 +1754,10 @@ web-streams-polyfill@^3.1.1:
   resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz#71c2718c52b45fd49dbeee88634b3a60ceab42a6"
   integrity sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==
 
-web3.storage@^3.5.3:
-  version "3.5.7"
-  resolved "https://registry.yarnpkg.com/web3.storage/-/web3.storage-3.5.7.tgz#839e9abdd8369addac961a9c684df155a96cfeb2"
-  integrity sha512-TU8wmbocthzUwi4Enr2zSw5dUN593fYrDFEDzu5MHbUrF9e/pcfCLBxDa6ABD3/8LAq2JOjRT5sxY/lRfqESzg==
+web3.storage@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/web3.storage/-/web3.storage-4.2.0.tgz#64f2be25a29facc1a667d02b6d2f7b13bfc66875"
+  integrity sha512-s7yf9nR9TsnKyPdijQMq48q7NV9WNZ8AWyMroa1F0ZOVExUpx9DVIxsLCCZRJEuMZsitnLSbvXK2CexMNyYKKg==
   dependencies:
     "@ipld/car" "^3.1.4"
     "@web-std/blob" "^3.0.4"
@@ -1736,11 +1768,12 @@ web3.storage@^3.5.3:
     carbites "^1.0.6"
     cborg "^1.8.0"
     files-from-path "^0.2.4"
-    ipfs-car "^0.6.2"
+    ipfs-car "^0.7.0"
     ipns "^0.16.0"
     libp2p-crypto "^0.21.0"
     p-retry "^4.5.0"
     streaming-iterables "^6.2.0"
+    throttled-queue "^2.1.2"
     uint8arrays "^3.0.0"
 
 which-boxed-primitive@^1.0.2:
