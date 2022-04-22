@@ -1,0 +1,2 @@
+# The following text files requires strict end of line rules
+*.sh text eol=lf
