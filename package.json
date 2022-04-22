@@ -1,7 +1,7 @@
 {
   "type": "module",
   "devDependencies": {
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "nft.storage": "^5.2.0",
     "process": "^0.11.10",
     "web3.storage": "^3.5.3"
