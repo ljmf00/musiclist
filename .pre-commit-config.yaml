@@ -92,6 +92,11 @@ repos:
     rev: v1.3.0
     hooks:
       - id: yesqa
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v8.12.0
+    hooks:
+      - id: eslint
+        args: [--fix]
 ci:
   autofix_prs: false
   autoupdate_commit_msg: 'chore(pre-commit): bump repositories'
