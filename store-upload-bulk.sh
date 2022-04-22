@@ -16,4 +16,3 @@ for folder in */ ; do
     ./upload.sh
   fi
 done
-

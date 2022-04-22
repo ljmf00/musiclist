@@ -11,4 +11,3 @@ if [ -d "prepare" ] && (find prepare -type f | grep '' >/dev/null); then
     rm "$file"
   done
 fi
-
