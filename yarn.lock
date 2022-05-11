@@ -1257,10 +1257,10 @@ multiaddr@^10.0.0:
     uint8arrays "^3.0.0"
     varint "^6.0.0"
 
-multiformats@^9.0.4, multiformats@^9.4.13, multiformats@^9.4.2, multiformats@^9.4.5, multiformats@^9.4.7, multiformats@^9.5.4, multiformats@^9.6.3:
-  version "9.6.4"
-  resolved "https://registry.yarnpkg.com/multiformats/-/multiformats-9.6.4.tgz#5dce1f11a407dbb69aa612cb7e5076069bb759ca"
-  integrity sha512-fCCB6XMrr6CqJiHNjfFNGT0v//dxOBMrOMqUIzpPc/mmITweLEyhvMpY9bF+jZ9z3vaMAau5E8B68DW77QMXkg==
+multiformats@^9.0.4, multiformats@^9.4.13, multiformats@^9.4.2, multiformats@^9.4.5, multiformats@^9.4.7, multiformats@^9.5.4, multiformats@^9.6.3, multiformats@^9.6.4:
+  version "9.6.5"
+  resolved "https://registry.yarnpkg.com/multiformats/-/multiformats-9.6.5.tgz#f2d894a26664b454a90abf5a8911b7e39195db80"
+  integrity sha512-vMwf/FUO+qAPvl3vlSZEgEVFY/AxeZq5yg761ScF3CZsXgmTi/HGkicUiNN0CI4PW8FiY2P0OLklOcmQjdQJhw==
 
 murmurhash3js-revisited@^3.0.0:
   version "3.0.0"
@@ -1282,10 +1282,10 @@ native-fetch@^3.0.0:
   resolved "https://registry.yarnpkg.com/native-fetch/-/native-fetch-3.0.0.tgz#06ccdd70e79e171c365c75117959cf4fe14a09bb"
   integrity sha512-G3Z7vx0IFb/FQ4JxvtqGABsOTIqRWvgQz6e+erkB+JJD6LrszQtMozEHI4EkmgZQvnGHrpLVzUWk7t4sJCIkVw==
 
-nft.storage@^5.2.0:
-  version "5.2.5"
-  resolved "https://registry.yarnpkg.com/nft.storage/-/nft.storage-5.2.5.tgz#55c9f1b3cd40654cfeae006c3a4abb2da238049f"
-  integrity sha512-ITP9ETleKIZvSRsjpHi6JFFE/YVcp9jwwyi+Q1GtdNmFc5Xyu1g7it+yrk7m5+iSEMcOjSJGPQrktnUTe0qtAg==
+nft.storage@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/nft.storage/-/nft.storage-6.2.0.tgz#bba76b58663367762873e61b8d994b8defbf5cc3"
+  integrity sha512-kwyRWnQ/rkSv4IEtWeZK//yH1ZFZG8UhitHqlAcGKpSlMBP7DphGIeK1iAymq9J43IEPwxhcSQTyG+fOBbNjIw==
   dependencies:
     "@ipld/car" "^3.2.3"
     "@ipld/dag-cbor" "^6.0.13"
@@ -1295,9 +1295,10 @@ nft.storage@^5.2.0:
     "@web-std/form-data" "^3.0.0"
     carbites "^1.0.6"
     ipfs-car "^0.6.2"
-    multiformats "^9.6.3"
+    multiformats "^9.6.4"
     p-retry "^4.6.1"
     streaming-iterables "^6.0.0"
+    throttled-queue "^2.1.2"
 
 node-fetch@^2.6.1, "node-fetch@https://registry.npmjs.org/@achingbrain/node-fetch/-/node-fetch-2.6.7.tgz":
   version "2.6.7"
