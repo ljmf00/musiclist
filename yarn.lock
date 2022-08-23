@@ -179,6 +179,18 @@
     "@web3-storage/multipart-parser" "^1.0.0"
     data-uri-to-buffer "^3.0.1"
 
+"@web-std/fetch@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@web-std/fetch/-/fetch-4.1.0.tgz#db1eb659198376dad692421896b7119fb13e6e52"
+  integrity sha512-ZRizMcP8YyuRlhIsRYNFD9x/w28K7kbUhNGmKM9hDy4qeQ5xMTk//wA89EF+Clbl6EP4ksmCcN+4TqBMSRL8Zw==
+  dependencies:
+    "@web-std/blob" "^3.0.3"
+    "@web-std/form-data" "^3.0.2"
+    "@web-std/stream" "^1.0.1"
+    "@web3-storage/multipart-parser" "^1.0.0"
+    data-uri-to-buffer "^3.0.1"
+    mrmime "^1.0.0"
+
 "@web-std/file@^3.0.0", "@web-std/file@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@web-std/file/-/file-3.0.2.tgz#b84cc9ed754608b18dcf78ac62c40dbcc6a94692"
@@ -197,6 +209,13 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@web-std/stream/-/stream-1.0.0.tgz#01066f40f536e4329d9b696dc29872f3a14b93c1"
   integrity sha512-jyIbdVl+0ZJyKGTV0Ohb9E6UnxP+t7ZzX4Do3AHjZKxUXKMs9EmqnBDQgHF7bEw0EzbQygOjtt/7gvtmi//iCQ==
+  dependencies:
+    web-streams-polyfill "^3.1.1"
+
+"@web-std/stream@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@web-std/stream/-/stream-1.0.1.tgz#af2972654848e20a683781b0a50bef2ce3f011a0"
+  integrity sha512-tsz4Y0WNDgFA5jwLSeV7/UV5rfMIlj0cPsSLVfTihjaVW0OJPd5NxJ3le1B3yLyqqzRpeG5OAfJAADLc4VoGTA==
   dependencies:
     web-streams-polyfill "^3.1.1"
 
@@ -345,10 +364,10 @@ carbites@^1.0.6:
     "@ipld/dag-pb" "^2.0.2"
     multiformats "^9.0.4"
 
-cborg@^1.3.3, cborg@^1.5.4, cborg@^1.6.0, cborg@^1.8.0:
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/cborg/-/cborg-1.9.1.tgz#9ea2f7b1745048e7db51e78d54e8a9a0e4f64a11"
-  integrity sha512-6xKRdJ89ncwEXJGx9rFMRBNp72UqgYSGt2a88rqsvCLda4OuhRlh3xD2nu+ufrw6h9l94K0cnvyD4WEGpKtRtw==
+cborg@^1.3.3, cborg@^1.5.4, cborg@^1.6.0, cborg@^1.8.0, cborg@^1.9.4:
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/cborg/-/cborg-1.9.4.tgz#85354ee6e0fe017dd34e300c3dcd044407a27800"
+  integrity sha512-ltobKo17xKYJolhg8UxQhvzcqXhjtUnovwe9Xx59Izo32gLwozGoJs/efp+8dZ5+zu9pNJYnHtmp6iJnDUapww==
 
 chalk@^2.0.0:
   version "2.4.2"
@@ -1122,7 +1141,7 @@ kind-of@^6.0.3:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-libp2p-crypto@^0.21.0:
+libp2p-crypto@^0.21.0, libp2p-crypto@^0.21.2:
   version "0.21.2"
   resolved "https://registry.yarnpkg.com/libp2p-crypto/-/libp2p-crypto-0.21.2.tgz#7f9875436f24ca3887b077210b217b702bd72916"
   integrity sha512-EXFrhSpiHtJ+/L8xXDvQNK5VjUMG51u878jzZcaT5XhuN/zFg6PWJFnl/qB2Y2j7eMWnvCRP7Kp+ua2H36cG4g==
@@ -1227,6 +1246,11 @@ move-file@^2.1.0:
   integrity sha512-i9qLW6gqboJ5Ht8bauZi7KlTnQ3QFpBCvMvFfEcHADKgHGeJ9BZMO7SFCTwHPV9Qa0du9DYY1Yx3oqlGt30nXA==
   dependencies:
     path-exists "^4.0.0"
+
+mrmime@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/mrmime/-/mrmime-1.0.1.tgz#5f90c825fad4bdd41dc914eff5d1a8cfdaf24f27"
+  integrity sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==
 
 ms@2.1.2:
   version "2.1.2"
@@ -1657,10 +1681,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-throttled-queue@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/throttled-queue/-/throttled-queue-2.1.2.tgz#52d39708ee5adf019091eed7c820e1def8544b22"
-  integrity sha512-tUa5+OEw0zqNeKFFc/meOruMylj3ZZSS1X1e8WqU2YZ5jFwIU0qQP8IMuLq1eIuqdhHukktwONajChwqEwMkqA==
+throttled-queue@^2.1.2, throttled-queue@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/throttled-queue/-/throttled-queue-2.1.4.tgz#4e2008c73ab3f72ba1bb09496c3cc9c5b745dbee"
+  integrity sha512-YGdk8sdmr4ge3g+doFj/7RLF5kLM+Mi7DEciu9PHxnMJZMeVuZeTj31g4VE7ekUffx/IdbvrtOCiz62afg0mkg==
 
 timeout-abort-controller@^1.1.1:
   version "1.1.1"
@@ -1742,6 +1766,17 @@ varint@^6.0.0:
   resolved "https://registry.yarnpkg.com/varint/-/varint-6.0.0.tgz#9881eb0ce8feaea6512439d19ddf84bf551661d0"
   integrity sha512-cXEIW6cfr15lFv563k4GuVuW/fiwjknytD37jIOLSdSWuOI6WnO/oKwmP2FQTU2l01LP8/M5TSAJpzUaGe3uWg==
 
+w3name@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/w3name/-/w3name-1.0.4.tgz#aacb8658ed43935f4b37fe6a868e78e44d6c0765"
+  integrity sha512-wR7+MCCgutYTc7R17zsUji/XRm9JcaX72ac8rJcAS+WUJYWYR+jf0v8NT82kYhpwnv/yeXlFa/KqNbzI7TvFSA==
+  dependencies:
+    "@web-std/fetch" "^4.1.0"
+    cborg "^1.9.4"
+    ipns "^0.16.0"
+    libp2p-crypto "^0.21.2"
+    throttled-queue "^2.1.4"
+
 web-encoding@1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/web-encoding/-/web-encoding-1.1.5.tgz#fc810cf7667364a6335c939913f5051d3e0c4864"
@@ -1756,10 +1791,10 @@ web-streams-polyfill@^3.1.1:
   resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz#71c2718c52b45fd49dbeee88634b3a60ceab42a6"
   integrity sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==
 
-web3.storage@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/web3.storage/-/web3.storage-4.3.0.tgz#88f778a0e2463701a1d2434e9835d930fa7aa18f"
-  integrity sha512-9IKn+4dyF7cMXC9etVzW3qmCV/6sL+Za4kcUUn7D3qRt4s1DrKUGJdAe9VvYcpHwbnnYoKNBu06lGO++daDo8w==
+web3.storage@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/web3.storage/-/web3.storage-4.4.0.tgz#c62807e6400b16eb028d93bed6d7f76a929150a8"
+  integrity sha512-I48GB+cFGfSbi47e3ZmyRX/ZUi9EcrqUylZ6FG1AU8UGErG3t4svZocaXTaUnp2zZWAtbbUFsFtD/cd9FgoVjA==
   dependencies:
     "@ipld/car" "^3.1.4"
     "@web-std/blob" "^3.0.4"
@@ -1771,12 +1806,12 @@ web3.storage@^4.3.0:
     cborg "^1.8.0"
     files-from-path "^0.2.4"
     ipfs-car "^0.7.0"
-    ipns "^0.16.0"
     libp2p-crypto "^0.21.0"
     p-retry "^4.5.0"
     streaming-iterables "^6.2.0"
     throttled-queue "^2.1.2"
     uint8arrays "^3.0.0"
+    w3name "^1.0.4"
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
