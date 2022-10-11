@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.7",
     "nft.storage": "^7.0.0",
     "process": "^0.11.10",
     "web3.storage": "^4.4.0"
