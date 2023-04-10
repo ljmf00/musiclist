@@ -1306,10 +1306,10 @@ native-fetch@^3.0.0:
   resolved "https://registry.yarnpkg.com/native-fetch/-/native-fetch-3.0.0.tgz#06ccdd70e79e171c365c75117959cf4fe14a09bb"
   integrity sha512-G3Z7vx0IFb/FQ4JxvtqGABsOTIqRWvgQz6e+erkB+JJD6LrszQtMozEHI4EkmgZQvnGHrpLVzUWk7t4sJCIkVw==
 
-nft.storage@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/nft.storage/-/nft.storage-7.0.0.tgz#9855106a16649673db12684232bb0292694230fe"
-  integrity sha512-6ris9loxF9TNTPY/JghLzdLlvFV3UzWkUcVTfmrRn49jzDUfyT5wMhDmYRBQuknNFN1jf7jlSGNHixs5SpOoOA==
+nft.storage@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/nft.storage/-/nft.storage-7.0.3.tgz#68a66410decca8bbbf15fe68b6bd495b6e42e872"
+  integrity sha512-6VRwNKALjGOfKgUdQI/ZONeIXNf/Mviu+6u3Wb26IdvOW7Bq+KNX0XcQORfcqrG9hQcrk8F53sZNauqoPMSejw==
   dependencies:
     "@ipld/car" "^3.2.3"
     "@ipld/dag-cbor" "^6.0.13"
