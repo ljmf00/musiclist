@@ -5,7 +5,7 @@
     "minimist": "^1.2.8",
     "nft.storage": "^7.1.0",
     "process": "^0.11.10",
-    "web3.storage": "^4.5.4"
+    "web3.storage": "^4.5.5"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
