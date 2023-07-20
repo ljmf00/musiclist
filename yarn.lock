@@ -179,10 +179,10 @@
     "@web3-storage/multipart-parser" "^1.0.0"
     data-uri-to-buffer "^3.0.1"
 
-"@web-std/fetch@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@web-std/fetch/-/fetch-4.1.0.tgz#db1eb659198376dad692421896b7119fb13e6e52"
-  integrity sha512-ZRizMcP8YyuRlhIsRYNFD9x/w28K7kbUhNGmKM9hDy4qeQ5xMTk//wA89EF+Clbl6EP4ksmCcN+4TqBMSRL8Zw==
+"@web-std/fetch@^4.1.0", "@web-std/fetch@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@web-std/fetch/-/fetch-4.1.2.tgz#57feb1ae5a004cfeb5102441d35f49caf1dc2a83"
+  integrity sha512-NUX+nnCTjC6URLtFC2O9dX9FtzCS5nlbF/vZwkPlheq5h6+rQxluH/aO+ORbLjGY4z4iQOulfEGoHcXwx5GFUQ==
   dependencies:
     "@web-std/blob" "^3.0.3"
     "@web-std/form-data" "^3.0.2"
@@ -1792,14 +1792,14 @@ web-streams-polyfill@^3.1.1:
   resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz#71c2718c52b45fd49dbeee88634b3a60ceab42a6"
   integrity sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==
 
-web3.storage@^4.5.4:
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/web3.storage/-/web3.storage-4.5.4.tgz#bd85dd41e881ab8e22da65d681f8b25361e5b9a7"
-  integrity sha512-QSdiPEMgXCkk9Y0y3U1pyTu8n1TOOctwq7h9Loz7NYPla9QZesbg4lSxe0XWPltzyJEkI43yC1hy8gNxNEiizA==
+web3.storage@^4.5.5:
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/web3.storage/-/web3.storage-4.5.5.tgz#6c886c51e09bd97bf242e7867f16db2efe223822"
+  integrity sha512-ABW1Gk4gpkVkEIgeQTcoqZ1pI1YKQiBbZDploAcyldFWCXtdBpsijrRHg0S5Mwlvllw4E8OsRm/9HG2nVaGsCg==
   dependencies:
     "@ipld/car" "^3.1.4"
     "@web-std/blob" "^3.0.4"
-    "@web-std/fetch" "^3.0.3"
+    "@web-std/fetch" "^4.1.2"
     "@web-std/file" "^3.0.2"
     "@web3-storage/parse-link-header" "^3.1.0"
     browser-readablestream-to-it "^1.0.3"
