@@ -169,16 +169,6 @@
     "@web-std/stream" "1.0.0"
     web-encoding "1.1.5"
 
-"@web-std/fetch@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@web-std/fetch/-/fetch-3.0.3.tgz#507e1371825298aae61172b0da439570437d3982"
-  integrity sha512-PtaKr6qvw2AmKChugzhQWuTa12dpbogHRBxwcleAZ35UhWucnfD4N+g3f7qYK2OeioSWTK3yMf6n/kOOfqxHaQ==
-  dependencies:
-    "@web-std/blob" "^3.0.3"
-    "@web-std/form-data" "^3.0.2"
-    "@web3-storage/multipart-parser" "^1.0.0"
-    data-uri-to-buffer "^3.0.1"
-
 "@web-std/fetch@^4.1.0", "@web-std/fetch@^4.1.2":
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/@web-std/fetch/-/fetch-4.1.2.tgz#57feb1ae5a004cfeb5102441d35f49caf1dc2a83"
@@ -1456,9 +1446,9 @@ process@^0.11.10:
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
 
 protobufjs@^6.10.2, protobufjs@^6.11.2:
-  version "6.11.3"
-  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-6.11.3.tgz#637a527205a35caa4f3e2a9a4a13ddffe0e7af74"
-  integrity sha512-xL96WDdCZYdU7Slin569tFX712BxsxslWwAfAhCYjQKGTq7dAU91Lomy6nLLhh/dyGhk/YH4TwTSRxTzhuHyZg==
+  version "6.11.4"
+  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-6.11.4.tgz#29a412c38bf70d89e537b6d02d904a6f448173aa"
+  integrity sha512-5kQWPaJHi1WoCpjTGszzQ32PG2F4+wRY6BmAT4Vfw56Q2FZ4YZzK20xUYQH4YkfehY1e6QSICrJquM6xXZNcrw==
   dependencies:
     "@protobufjs/aspromise" "^1.1.2"
     "@protobufjs/base64" "^1.1.2"
